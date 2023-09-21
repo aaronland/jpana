@@ -1,0 +1,19 @@
+body {
+	font-family: sans-serif;
+}
+
+form {
+	margin-bottom:1.5rem;
+}
+
+#feedback {
+	margin-bottom: 1.5rem;
+}
+
+#japanese{
+	border: solid thin;
+	min-height: 20vh;
+	font-size: 4rem;
+	width: 15vw;
+	margin-bottom: 1.5rem;
+}
