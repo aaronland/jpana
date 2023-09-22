@@ -80,6 +80,7 @@ window.addEventListener("load", function load(event){
 	    }
 	    
 	    feedback_el.innerText = "Incorrect. '" + enc_en + "' is not '" + enc_jp + "'" ;
+	    english_el.value = "";
 	    return false;
 	};
     }
