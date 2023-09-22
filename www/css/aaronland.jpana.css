@@ -8,6 +8,7 @@ form {
 
 #chart {
 	opacity: .85;
+
 }
 
 
@@ -68,4 +69,8 @@ form {
 	border: none !important;
 	justify-content: center;
 	display: flex;
+}
+
+#close-header {
+		
 }
