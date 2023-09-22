@@ -5,7 +5,8 @@ window.addEventListener("load", function load(event){
     var feedback_el = document.getElementById("feedback");
     var button_el = document.getElementById("translate");
     var chart_el = document.getElementById("show-chart");    
-
+    var refresh_el = document.getElementById("refresh-button");
+    
     var feedback_timeout;
     var last_pick;
     
@@ -85,6 +86,11 @@ window.addEventListener("load", function load(event){
 	};
     }
 
+    refresh_el.onclick = function(){
+	pick();
+	return false;
+    };
+    
     chart_el.onclick = show_chart;
     pick();
 });

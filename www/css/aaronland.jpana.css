@@ -110,6 +110,12 @@ form {
 	
 }
 
+#refresh-wrapper {
+	position: absolute;
+	bottom: .5rem;
+	right: .5rem;
+}
+
 @media (min-width: 900px) {
 
 	#japanese {
