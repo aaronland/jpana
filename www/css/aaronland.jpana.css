@@ -17,3 +17,26 @@ form {
 	width: 15vw;
 	margin-bottom: 1.5rem;
 }
+
+.chart-cell {
+	text-align: center;
+	padding:.25rem;
+	border:solid thin;
+}
+
+.chart-cell-jp {
+	font-size: large;
+	margin-bottom:.25rem;
+}
+
+.chart-cell-en {
+	font-size:small;
+	color: #ccc;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    justify-items: center;
+}
