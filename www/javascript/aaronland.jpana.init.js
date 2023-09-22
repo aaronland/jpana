@@ -1,10 +1,14 @@
 window.addEventListener("load", function load(event){
 
+    var close_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>';
+    
     var japanese_el = document.getElementById("japanese");
     var english_el = document.getElementById("english");
     var feedback_el = document.getElementById("feedback");
     var button_el = document.getElementById("translate");
     var chart_el = document.getElementById("show-chart");    
+
+    var feedback_timeout;
     
     var hirigana = aaronland.jpana.tables.hirigana();
     var english = Object.keys(hirigana);
@@ -34,10 +38,26 @@ window.addEventListener("load", function load(event){
 	    chart.appendChild(cell);
 	}
 
+	var close_header = document.createElement("div");
+	close_header.setAttribute("id", "close-header");
+	
+	var close_form = document.createElement("form");
+	close_form.setAttribute("method", "dialog");
+	close_form.setAttribute("class", "chart-close");
+
+	var close_btn = document.createElement("button");
+	close_btn.setAttribute("class", "btn");
+	close_btn.innerHTML = close_svg;
+
+	close_form.appendChild(close_btn);
+	close_header.appendChild(close_form);
+	
 	var dlg = document.createElement("dialog");
 	dlg.setAttribute("id", "chart");
 
+	dlg.appendChild(close_header);	
 	dlg.appendChild(chart);
+	
 	return dlg;
     };
 
@@ -66,15 +86,31 @@ window.addEventListener("load", function load(event){
 	// console.log(english_text);
 	
 	japanese_el.innerText = japanese_text;
+	english_el.value = "";
 	
 	button_el.onclick = function(){
 
+	    // feedback_el.innerText = "";
+
+	    if (feedback_timeout){
+		clearTimeout(feedback_timeout);
+	    }
+	    
 	    var input = english_el.value;
 	    
 	    if (input == english_text){
+
+		feedback_el.innerText = "That is correct.";
+
+		feedback_timeout = setTimeout(function(){
+		    feedback_el.innerText = "";
+		}, 5000);
+		
 		pick();
+		return false;
 	    }
-	    
+
+	    feedback_el.innerText = "Incorrect.";
 	    return false;
 	};
     }

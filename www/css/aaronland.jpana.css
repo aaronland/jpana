@@ -6,16 +6,21 @@ form {
 	margin-bottom:1.5rem;
 }
 
+#chart {
+	opacity: .85;
+}
+
+
 #feedback {
 	margin-bottom: 1.5rem;
 }
 
 #japanese{
 	border: solid thin;
-	min-height: 20vh;
 	font-size: 4rem;
-	width: 15vw;
 	margin-bottom: 1.5rem;
+	text-align:center;
+	padding: 2rem;
 }
 
 .chart-cell {
@@ -39,4 +44,28 @@ form {
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     justify-items: center;
+}
+
+.container {
+	display:grid;
+	justify-content: center;
+	margin-top:1rem;
+}
+
+.card {
+	border: none !important;
+}
+
+.card-header {
+	background-color: transparent !important;
+	border: none !important;
+	justify-content: right;
+	display: flex;
+}
+
+.card-footer {
+	background-color: transparent !important;
+	border: none !important;
+	justify-content: center;
+	display: flex;
 }
