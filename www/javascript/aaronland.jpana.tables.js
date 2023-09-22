@@ -62,7 +62,8 @@ aaronland.jpana.tables = (function(){
 		"jo": "じょ",
 		
 		"ta": "た",
-		"ti": "ち",
+		"chi": "ち",		
+		// "ti": "ち",
 		"tsu": "つ",		
 		// "tu": "つ",
 		"te": "て",		
@@ -110,19 +111,19 @@ aaronland.jpana.tables = (function(){
 		"mu": "む",
 		"me": "め",
 		"mo": "も",
-		
-		"ya": "や",
-		"x-yi": "",
-		"yu": "ゆ",
-		"ye": "いぇ",
-		"yo": "よ",
-		
+				
 		"ra": "ら",
 		"ri": "り",
 		"ru": "る",
 		"re": "れ",
 		"ro": "ろ",
-		
+				
+		"va": "ゔぁ",
+		"vi": "ゔぃ",
+		"vu": "ゔ",
+		"ve": "ゔぇ",
+		"vo": "ゔぉ",
+
 		"wa": "わ",
 		//"wa": "うぁ",
 		"wi": "うぃ",		
@@ -133,11 +134,11 @@ aaronland.jpana.tables = (function(){
 		"wo": "を",		
 		//"wo": "うぉ",
 		
-		"va": "ゔぁ",
-		"vi": "ゔぃ",
-		"vu": "ゔ",
-		"ve": "ゔぇ",
-		"vo": "ゔぉ",
+		"ya": "や",
+		"x-yi": "",
+		"yu": "ゆ",
+		"ye": "いぇ",
+		"yo": "よ",
 		
 		// threeH
 		
@@ -160,23 +161,23 @@ aaronland.jpana.tables = (function(){
 		"x-she": "",
 		"sho": "しょ",
 		
-		"sya": "しゃ",
-		"x-syi": "",
-		"syu": "しゅ",
-		"x-sye": "",
-		"syo": "しょ",
+		// "sya": "しゃ",
+		// "x-syi": "",
+		// "syu": "しゅ",
+		// "x-sye": "",
+		// "syo": "しょ",
 
 		"cha": "ちゃ",		
-		"chi": "ち",
+		"x-chi": "",
 		"chu": "ちゅ",		
 		"che": "ちぇ",
 		"cho": "ちょ",
 				
-		"tya": "ちゃ",
-		"x-tyi": "",
-		"tyu": "ちゅ",
-		"tye": "ちぇ",
-		"tyo": "ちょ",
+		// "tya": "ちゃ",
+		// "x-tyi": "",
+		// "tyu": "ちゅ",
+		// "tye": "ちぇ",
+		// "tyo": "ちょ",
 		
 		"dha": "ぢゃ",
 		"dhi": "でぃ",
@@ -217,7 +218,8 @@ aaronland.jpana.tables = (function(){
 		"myu": "みゅ",
 		"x-mye": "",		
 		"myo": "みょ",
-		
+
+		/*
 		"xya": "ゃ",
 		"x-xyi": "",		
 		"xyu": "ゅ",
@@ -229,6 +231,7 @@ aaronland.jpana.tables = (function(){
 		"lyu": "ゅ",
 		"x-lye": "",		
 		"lyo": "ょ",
+		 */
 		
 		"rya": "りゃ",
 		"x-ryi": "",		
@@ -236,6 +239,7 @@ aaronland.jpana.tables = (function(){
 		"x-rye": "",		
 		"ryo": "りょ",
 
+		
 		"n": "ん",		
 	    };
 	},
