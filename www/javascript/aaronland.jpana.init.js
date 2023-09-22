@@ -9,6 +9,7 @@ window.addEventListener("load", function load(event){
     var chart_el = document.getElementById("show-chart");    
 
     var feedback_timeout;
+    var last_pick;
     
     var hirigana = aaronland.jpana.tables.hirigana();
     var english = Object.keys(hirigana);
@@ -22,6 +23,11 @@ window.addEventListener("load", function load(event){
 	for (en_text in table) {
 	    
 	    var jp_text = table[en_text];
+
+	    if (en_text.startsWith("x-")){
+		en_text = "";
+		jp_text = "";
+	    }
 
 	    var cell = document.createElement("div");
 	    cell.setAttribute("class", "chart-cell grid-cell");
@@ -47,6 +53,7 @@ window.addEventListener("load", function load(event){
 	close_form.setAttribute("class", "chart-close");
 
 	var close_btn = document.createElement("button");
+	close_btn.setAttribute("id", "chart-close-button");	
 	close_btn.setAttribute("class", "btn");
 	close_btn.innerHTML = close_svg;
 
@@ -85,12 +92,23 @@ window.addEventListener("load", function load(event){
 	var english_text = "";
 	
 	while (english_text == "") {
+	    
 	    var idx = Math.floor(Math.random() * english.length);
 	    english_text = english[idx];
+
+	    if (english_text.startsWith("x-")){
+		english_text = "";
+	    }
 	}
 	
 	var japanese_text = hirigana[english[idx]];
 
+	if (japanese_text == last_pick){
+	    return pick();
+	}
+
+	last_pick = japanese_text;
+	
 	// console.log(japanese_text);
 	// console.log(english_text);
 	
@@ -106,7 +124,8 @@ window.addEventListener("load", function load(event){
 	    }
 	    
 	    var input = english_el.value;
-
+	    input = input.toLowerCase();
+	    
 	    enc_en = escape(input);
 	    enc_jp = japanese_text;
 	    

@@ -8,11 +8,17 @@ form {
 
 #show-chart {
 	float: right;
+
+}
+
+#chart-close-button {
+	padding-left: 0px !important;
+	padding-right: 0px !important;	
 }
 
 #chart {
 	opacity: .85;
-
+	width: 100vw;
 }
 
 
@@ -29,7 +35,7 @@ form {
 }
 
 .chart {
-	margin-right: 50px;
+	margin-left: 30px;
 }
 
 .chart-cell {
@@ -92,9 +98,7 @@ form {
 
 #close-header {
 	position:fixed;
-	right:17px;
 	top:25px;
-	text-align:right;
 }
 
 #chart-wrapper {
@@ -110,4 +114,9 @@ form {
 	.chart-cell-jp {
 		font-size:3rem;
 	}
+
+	#chart {
+		width: 50vw !important;
+	}
+	
 }
