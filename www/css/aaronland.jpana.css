@@ -6,6 +6,10 @@ form {
 	margin-bottom:1.5rem;
 }
 
+#show-chart {
+	float: right;
+}
+
 #chart {
 	opacity: .85;
 
@@ -24,26 +28,40 @@ form {
 	padding: 2rem;
 }
 
+.chart {
+	margin-right: 50px;
+}
+
 .chart-cell {
 	text-align: center;
 	padding:.25rem;
 	border:solid thin;
+	width:100%;
 }
 
 .chart-cell-jp {
-	font-size: large;
 	margin-bottom:.25rem;
 }
 
 .chart-cell-en {
-	font-size:small;
-	color: #ccc;
+	font-size:.9rem;;
+	color: #fff;
+	background-color: #000;
+	padding-top.5rem;
+	padding-bottom.5rem;	
 }
 
 .grid {
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
+    gap: 3px 3px;
+    justify-items: center;
+}
+
+.translate-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 10px 10px;
     justify-items: center;
 }
 
@@ -60,6 +78,7 @@ form {
 .card-header {
 	background-color: transparent !important;
 	border: none !important;
+
 	justify-content: right;
 	display: flex;
 }
@@ -72,5 +91,23 @@ form {
 }
 
 #close-header {
-		
+	position:fixed;
+	right:17px;
+	top:25px;
+	text-align:right;
+}
+
+#chart-wrapper {
+	position:relative;
+}
+
+#translate {
+	border: solid thin;
+	
+}
+
+@media (min-width: 900px) {
+	.chart-cell-jp {
+		font-size:3rem;
+	}
 }

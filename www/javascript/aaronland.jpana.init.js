@@ -16,6 +16,7 @@ window.addEventListener("load", function load(event){
     var build_chart = function(table) {
 
 	var chart = document.createElement("div");
+	chart.setAttribute("id", "chart-grid");
 	chart.setAttribute("class", "chart grid");
 
 	for (en_text in table) {
@@ -51,13 +52,17 @@ window.addEventListener("load", function load(event){
 
 	close_form.appendChild(close_btn);
 	close_header.appendChild(close_form);
+
+	var wrapper = document.createElement("div");
+	wrapper.setAttribute("id", "chart-wrapper");
 	
+	wrapper.appendChild(close_header);	
+	wrapper.appendChild(chart);
+
 	var dlg = document.createElement("dialog");
 	dlg.setAttribute("id", "chart");
 
-	dlg.appendChild(close_header);	
-	dlg.appendChild(chart);
-	
+	dlg.appendChild(wrapper);
 	return dlg;
     };
 
@@ -77,9 +82,13 @@ window.addEventListener("load", function load(event){
     
     var pick = function(){
 
-	var idx = Math.floor(Math.random() * english.length);
-
-	var english_text = english[idx];
+	var english_text = "";
+	
+	while (english_text == "") {
+	    var idx = Math.floor(Math.random() * english.length);
+	    english_text = english[idx];
+	}
+	
 	var japanese_text = hirigana[english[idx]];
 
 	// console.log(japanese_text);
@@ -97,10 +106,13 @@ window.addEventListener("load", function load(event){
 	    }
 	    
 	    var input = english_el.value;
+
+	    enc_en = escape(input);
+	    enc_jp = japanese_text;
 	    
 	    if (input == english_text){
 
-		feedback_el.innerText = "That is correct.";
+		feedback_el.innerText = "That is correct. '" + enc_jp + "' is '" + enc_en + "'";
 
 		feedback_timeout = setTimeout(function(){
 		    feedback_el.innerText = "";
@@ -109,8 +121,8 @@ window.addEventListener("load", function load(event){
 		pick();
 		return false;
 	    }
-
-	    feedback_el.innerText = "Incorrect.";
+	    
+	    feedback_el.innerText = "Incorrect. '" + enc_en + "' is not '" + enc_jp + "'" ;
 	    return false;
 	};
     }
