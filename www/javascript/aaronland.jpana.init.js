@@ -92,5 +92,19 @@ window.addEventListener("load", function load(event){
     };
     
     chart_el.onclick = show_chart;
+
+    if (document.body.getAttribute("data-offline-scope") != "") {
+	
+	aaronland.jpana.offline.init();
+    } 
+
+    refresh_el.ondblclick = function(){
+	aaronland.jpana.offline.purge_with_confirmation();
+	return false;
+    };
+
+    // TBD...
+    // https://stackoverflow.com/questions/56351216/ios-safari-unwanted-scroll-when-keyboard-is-opened-and-body-scroll-is-disabled
+    
     pick();
 });
