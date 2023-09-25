@@ -109,7 +109,7 @@ window.addEventListener("load", function load(event){
     
     function viewportHandler(event) {
 	// This is not elegant, but works
-	window.scrollTo(0, 0);
+	window.scrollTo({top: 0, behavior: "smooth"});
     };
     
     window.visualViewport.addEventListener("resize", viewportHandler);
