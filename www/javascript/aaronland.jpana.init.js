@@ -105,6 +105,14 @@ window.addEventListener("load", function load(event){
 
     // TBD...
     // https://stackoverflow.com/questions/56351216/ios-safari-unwanted-scroll-when-keyboard-is-opened-and-body-scroll-is-disabled
+    // https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API
+    
+    function viewportHandler(event) {
+	// This is not elegant, but works
+	window.scrollTo(0, 0);
+    };
+    
+    window.visualViewport.addEventListener("resize", viewportHandler);
     
     pick();
 });
