@@ -1,4 +1,4 @@
-const cache_name = 'jpana-v0.0.2';
+const cache_name = 'jpana-v0.0.3';
 
 const app_files = [
     // HTML

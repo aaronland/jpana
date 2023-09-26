@@ -9,6 +9,7 @@ window.addEventListener("load", function load(event){
     
     var feedback_timeout;
     var last_pick;
+    var last_len;
     
     var hirigana = aaronland.jpana.tables.hirigana();
     var english = Object.keys(hirigana);
@@ -37,7 +38,17 @@ window.addEventListener("load", function load(event){
 
 	    if (english_text.startsWith("x-")){
 		english_text = "";
+		continue;
+	    } 
+
+	    var len = english_text.length;
+	    
+	    if ((last_len) && (last_len == len)){
+		english_text = "";
+		continue;
 	    }
+		
+	    last_len = len;		
 	}
 	
 	var japanese_text = hirigana[english[idx]];
