@@ -23,6 +23,10 @@ Mostly because I didn't spend much time thinking about a name. Both hirigana and
 
 ![](docs/images/jpana-character.png)
 
+The basic layout consists of a single Hirigana character rendered in a large font size. Underneath the character is an input field to enter in the English phoneme corresponding to that character followed by a submit button. To the right of the submit button is a "list" icon which will open a modal dialog listing all the Hirigana characters and their English phonemes.
+
+In the bottom right-hand corner of the page is a "refresh" icon which will load a new Hirigana character. If the "refresh" icon is double-click a confirmation window will be opened that, if agreed to, will purge any offline cache data for the application.
+
 ### A correct guess
 
 ![](docs/images/jpana-ha.png)
