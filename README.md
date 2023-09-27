@@ -29,11 +29,11 @@ In the bottom right-hand corner of the page is a "refresh" icon which will load 
 
 ### A correct guess
 
-<img src="docs/images/jpana-ha.png" height="320" />
+<img src="docs/images/jpana-ha.png" height="480" style="border:solid thin;" />
 
 ### An incorrect guess
 
-![](docs/images/jpana-ze-zo.png)
+<img src="docs/images/jpana-ze-zo.png" height="480" style="border:solid thin;" />
 
 ### The lookup chart of all Hirigana characters and their English phonemes
 
