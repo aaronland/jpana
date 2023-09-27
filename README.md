@@ -13,6 +13,15 @@ This application was inspired by Phil Gyford's [Hirigana and Katakana quiz](http
 
 So, that's what `jpana` does.
 
+## Demo
+
+https://aaronland.github.io/jpana/
+
+Notes:
+
+* This has been tests on desktop Firefox and Safari and iOS.
+* Offline support (service workers) for the demo application is not enabled at this time (see comments below).
+
 ## Why is it called "jpana" ?
 
 Mostly because I didn't spend much time thinking about a name. Both hirigana and katakana end in "ana" and "jp" is the abbreviation for Japan, so "jp" + "ana" = "jpana". Also, it's a mis-spelling of "japan" but that was just a coincidence.
@@ -42,6 +51,18 @@ In the bottom right-hand corner of the page is a "refresh" icon which will load 
 ### Purging offline caches
 
 ![](docs/images/jpana-cache.png)
+
+### Offline support
+
+The application is designed to work offline for devices that support the [Service Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). This works but should probably still be considered unstable. Support, or at least documentation, for Service Workers across platforms is inconsistent and they appear to be causing problems with the local caching functionality.
+
+Offline support is disabled by default. To enable offline support adjust the `data-offline-scope` attribute of the `body` in the `index.html` to be the value of [the scope used to register the Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#registering_your_worker).
+
+The interaction between an application's [Service Worker definition file](www/sw.js) and the browser's application cache (that caches the files defined by the Service Worker) remains a bit of a mystery to me. [Specifically, changing the Service Worker's cache key does not always invalidate existing caches.](https://stackoverflow.com/questions/41636754/how-to-clear-a-service-worker-cache-in-firefox/41675764#41675764) This can make updating an instance of the `jpana` application that has enabled offline support challenging where "challenging" means that changes aren't reflected and the only way to deal with the problem is to remove all the application data for the entire domain (hosting the `jpana` application).
+
+Purging the application will trigger a confirmation dialog. If you are purging the application cache will offline you will be presented with a second confirmation dialog to ensure that's what you really want to do. Purging the application cache while you are offline will effectively disable offline support for the `jpana` and the application won't work again until you are online again and can fetch the application files from source.
+
+_Note: Because offline support depends on Service Workers it will not be available if a device is running under Mac OS or iOS [with Lockdown mode enabled](https://webkit.org/blog/13966/webkit-features-in-safari-16-4/)._
 
 ## See also
 
