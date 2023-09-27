@@ -29,7 +29,7 @@ In the bottom right-hand corner of the page is a "refresh" icon which will load 
 
 ### A correct guess
 
-![](docs/images/jpana-ha.png)
+![](docs/images/jpana-ha.png | height=320)
 
 ### An incorrect guess
 
