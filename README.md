@@ -19,7 +19,7 @@ https://aaronland.github.io/jpana/
 
 Notes:
 
-* This has been tests on desktop Firefox and Safari and iOS.
+* This has been tested on desktop Firefox and Safari and iOS.
 * Offline support (service workers) for the demo application is not enabled at this time (see comments below).
 
 ## Why is it called "jpana" ?
