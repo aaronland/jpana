@@ -36,21 +36,31 @@ The basic layout consists of a single Hirigana character rendered in a large fon
 
 In the bottom right-hand corner of the page is a "refresh" icon which will load a new Hirigana character. If the "refresh" icon is double-click a confirmation window will be opened that, if agreed to, will purge any offline cache data for the application.
 
-### A correct guess
+### A correct translation (mobile)
 
 <img src="docs/images/jpana-ha.png" height="480" style="border:solid thin;" />
 
-### An incorrect guess
+When you correctly enter an English phoneme for a Hirigana character feedback will be displayed under the character. After 5 seconds it will disappear.
+
+A new character to translate will appear.
+
+### An incorrect translation (mobile)
 
 <img src="docs/images/jpana-ze-zo.png" height="480" style="border:solid thin;" />
+
+When you enter an incorrect English phoneme for a Hirigana character feedback will be displayed under the character. If you get tired of trying to translate it you can consult the chart of all the Hirigana characters by clicking the "list" icon to the right of the translate button or by clicking the "refresh" button, at the bottom-right of the page, to load a new character.
 
 ### The lookup chart of all Hirigana characters and their English phonemes
 
 ![](docs/images/jpana-chart.png)
 
+When you click the "list" icon to the right of the translate button a modal dialog will appear listing all the Hirigana characters and their English phonemes.
+
 ### Purging offline caches
 
 ![](docs/images/jpana-cache.png)
+
+If you double-click the "refresh" button, at the bottom-right of the page, you will be prompted to confirm that you want to purge any application cache files stored on your device. See the "Offline support" section below for details.
 
 ### Offline support
 
