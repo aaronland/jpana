@@ -13,6 +13,10 @@ This application was inspired by Phil Gyford's [Hirigana and Katakana quiz](http
 
 So, that's what `jpana` does.
 
+## Why is it called "jpana" ?
+
+Mostly because I didn't spend much time thinking about a name. Both hirigana and katakana end in "ana" and "jp" is the abbreviation for Japan, so "jp" + "ana" = "jpana". Also, it's a mis-spelling of "japan" but that was just a coincidence.
+
 ## Demo
 
 https://aaronland.github.io/jpana/
@@ -21,10 +25,6 @@ Notes:
 
 * This has been tested on desktop Firefox and Safari and iOS.
 * Offline support (service workers) for the demo application is not enabled at this time (see comments below).
-
-## Why is it called "jpana" ?
-
-Mostly because I didn't spend much time thinking about a name. Both hirigana and katakana end in "ana" and "jp" is the abbreviation for Japan, so "jp" + "ana" = "jpana". Also, it's a mis-spelling of "japan" but that was just a coincidence.
 
 ## Screenshots
 
