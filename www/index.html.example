@@ -8,7 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />	
 	<link rel="stylesheet" type="text/css" href="css/aaronland.jpana.css" />
     </head>
-    <body data-offline-scope="/jpana/">
+    <!-- see https://github.com/aaronland/jpana#offline-support for details about setting data-offline-scope attribute to enable service workers -->
+    <body>
 	<div class="container">
 	    <div class="card">
 		<div class="card-header">
